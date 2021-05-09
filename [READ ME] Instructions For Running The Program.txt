@@ -1,0 +1,56 @@
+[CCPROG3 MP: That's Life]
+By Andre Dominic H. Ponce and Joshue Salvador A. Jadie
+
+HOW TO RUN AND EXECUTE PROGRAM
+- The program will be ran using the Command Line / Terminal
+
+Steps:
+1) Create a folder named "That's Life!" in the Desktop and 
+   extract the zip file to the created folder. 
+
+2) If you have JavaFX already installed and PATH variable set,
+   skip to step 5
+
+3) Download JavaFX SDK (any latest version) zip in: 
+
+   https://gluonhq.com/products/javafx/#latest
+
+   Afterwards, extract the folder and place it inside the Java 
+   folder in the Program Files (If Windows).
+
+4) Add a new value to the Path Environment Variable: 
+   
+   Go to "Edit Environmental Variables" and edit the "Path" Variable:
+   add a new value: [IF VERSION IS 14.0.2.1]
+
+   "C:\Program Files\Java\javafx-sdk-14.0.2.1\bin"
+
+5) Open Command Line or Terminal 
+
+6) Go to the directory of the created folder "That's Life!"
+
+7) To compile all files, input: 
+
+javac --module-path "C:\Program Files\Java\javafx-sdk-14.0.2.1\lib" --add-modules=javafx.controls,javafx.fxml *.java
+
+8) To run the main GUI program, input: 
+
+java --module-path "C:\Program Files\Java\javafx-sdk-14.0.2.1\lib" --add-modules=javafx.controls,javafx.fxml View
+
+9) The program might take a while to load, this is because of the Images and ImageViews to be processed to 
+   build the board and other scenes requiring images. 
+
+   The command line will indicate if the program is almost ready to launch:
+   "Loading 25%..."
+   "Loading 50%..."
+   "Loading 75%..."
+   "Loading 100%..."
+
+   By the time "Loading 100%..." is printed, the application should launch. 
+
+NOTES: The value of the --module-path will change depending on the JavaFX version downloaded 
+       and directory set according to your use. 
+
+       After compiling, the command line / terminal will display that View.java uses 
+       unchecked or unsafe operations, specifically the EventHandlers which is integral
+       and important for the Controller. That said, the warnings shall be disregarded.
